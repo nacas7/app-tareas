@@ -1,0 +1,250 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: white;
+}
+/* HEADER */
+
+header{
+    background-color:#ffe54c;
+    display: flow-root
+}
+h1{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
+    margin: 30px;
+    color: black;
+    font-weight:bold;
+    font-weight: 100;
+   
+}
+/* FIN HEADER */
+
+/* SELECCIÓN DÍAS */
+main section{
+    display: flex;
+    flex-wrap: wrap;
+}
+main section .treinta{
+    display: block;
+    width: 30%;
+    height: auto;
+    position: relative;
+    right: 5%;
+
+   
+}
+main section .treinta button{
+    display: flex;
+    position: relative;
+    width: 30%;
+    padding: 10px;
+    margin-top: 30px;
+    margin-left: 60%;
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+    color:black;
+    
+}
+main section .treinta .menuDias{
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        font-weight:bold;
+        font-size: 15px;
+        font-weight: 100;
+        letter-spacing: 1px;
+        padding: 13px 50px 13px;
+        outline: 0;
+        border: 1px solid black;
+        cursor: pointer;
+        position: relative;
+        
+}
+.menuDias:after{
+        content: "";
+        background-color: #ffe54c;
+        width: 100%;
+        z-index: -1;
+        position: absolute;
+        height: 100%;
+        top: 7px;
+        left: 7px;
+        transition: 0.2s;
+}
+.menuDias:hover::after{
+    top: 0px;
+    left: 0px;
+}
+
+/* FIN SELECCIÓN DÍAS */
+
+/* SELECCIÓN TAREAS */
+main section .setenta{
+    display: flex;
+    width: 70%;
+    height: auto;
+    background-color: white;
+}
+
+main section .setenta{
+    display: flex;
+    flex-wrap: wrap;
+    width: calc(50% - 20px);
+    position: relative;
+    right: 58px;
+   
+}
+main section .setenta #tareas{
+    display: block;
+    width: 70%;
+    height: auto;
+    color: black;
+    padding: 1em;
+}
+
+main section .setenta #tareas article{
+    border-bottom: 2px solid #ffe54c;
+    padding: 3px;
+    padding-top: 10px;
+    margin-top: 5px;
+    font-size: 20px;
+}
+#tareas article p:hover{
+    text-decoration: line-through;
+    cursor: pointer;
+}
+main section .setenta .botones{
+    display: flex;
+    width: 70%;
+    height: auto;
+
+}
+main section .setenta .botones form{
+    width: 50%;
+    position: absolute;
+    
+}
+#save{
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-bottom: 1px solid #ffe54c;
+}
+#search{
+    padding: 10px;
+    border: none;
+    border-bottom: 1px solid #ffe54c;
+    position: relative;
+    top: 100px;
+}
+main section .setenta .botones form #btnSave{
+    margin: 10px;
+    position: relative;
+    top: 2px;
+    border: none;
+    font-size: 20px;
+    width: 30%;
+    height: auto;
+    cursor: pointer;
+}
+#btnSave{
+    background: #ffe54c;
+    color: black;
+    line-height: 42px;
+    padding: 0;
+    border: none;
+}
+#btnSave span{
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+#btnSave:before,
+#btnSave:after {
+  position: absolute;
+  content: "";
+  height: 0%;
+  width: 2px;
+  background: black;
+}
+#btnSave:before {
+    right: 0;
+    top: 0;
+    transition: all 500ms ease;
+  }
+  #btnSave::after {
+    left: 0;
+    bottom: 0;
+    transition: all 500ms ease;
+  }
+  #btnSave:hover{
+    color: black;
+    background: #ffe54c;
+  }
+  #btnSave:hover::before {
+    transition: all 500ms ease;
+    height: 100%;
+  }
+  #btnSave:hover:after {
+    transition: all 500ms ease;
+    height: 100%;
+  }
+  #btnSave span:before,
+#btnSave span:after {
+  position: absolute;
+  content: "";
+  background: black;
+}
+#btnSave span:before {
+    left: 0;
+    top: 0;
+    width: 0%;
+    height: 2px;
+    transition: all 500ms ease;
+}
+#btnSave span:after {
+    right: 0;
+    bottom: 0;
+    width: 0%;
+    height: 2px;
+    transition: all 500ms ease;
+  }
+  #btnSave span:hover:before {
+    width: 100%;
+  }
+  #btnSave span:hover:after {
+    width: 100%;
+  }
+
+/* main section .botones form select{
+    border: none;
+    width: 30%;
+    padding: 9px;
+    color: black;
+    background-color: #ffe54c;
+    font-size: 20px;
+    cursor: pointer;
+    position: absolute;
+    right: 35%;
+    top: 51%;
+} */
+    
+
+/* FIN SELECCIÓN TAREAS */
+
+
+/* BOTONES */
+main section .botones{
+    position: fixed;
+    top: 20%;
+    left: 64%;
+}
+/* FIN BOTONES */
+
